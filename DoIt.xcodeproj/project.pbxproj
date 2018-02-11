@@ -13,6 +13,7 @@
 		A9167293202FB1CA00C6538F /* DoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9167291202FB1CA00C6538F /* DoIt.xcdatamodeld */; };
 		A9167295202FB1CA00C6538F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9167294202FB1CA00C6538F /* Assets.xcassets */; };
 		A9167298202FB1CA00C6538F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9167296202FB1CA00C6538F /* LaunchScreen.storyboard */; };
+		A91672A0202FD00E00C6538F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A916729F202FD00E00C6538F /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A9167294202FB1CA00C6538F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9167297202FB1CA00C6538F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9167299202FB1CA00C6538F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A916729F202FD00E00C6538F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A916728A202FB1CA00C6538F /* AppDelegate.swift */,
 				A916728C202FB1CA00C6538F /* ViewController.swift */,
 				A916728E202FB1CA00C6538F /* Main.storyboard */,
+				A916729F202FD00E00C6538F /* Task.swift */,
 				A9167294202FB1CA00C6538F /* Assets.xcassets */,
 				A9167296202FB1CA00C6538F /* LaunchScreen.storyboard */,
 				A9167299202FB1CA00C6538F /* Info.plist */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91672A0202FD00E00C6538F /* Task.swift in Sources */,
 				A9167293202FB1CA00C6538F /* DoIt.xcdatamodeld in Sources */,
 				A916728D202FB1CA00C6538F /* ViewController.swift in Sources */,
 				A916728B202FB1CA00C6538F /* AppDelegate.swift in Sources */,
