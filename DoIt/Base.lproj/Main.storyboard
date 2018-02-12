@@ -13,7 +13,7 @@
         <!--Do It-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TasksViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,16 +50,64 @@
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="L6h-TA-cha">
             <objects>
-                <viewController id="Xjt-Kf-Lu9" sceneMemberID="viewController">
+                <viewController id="Xjt-Kf-Lu9" customClass="CreateTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="clY-4I-Alv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdI-TD-efR">
+                                <rect key="frame" x="162" y="84" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Juf-o7-1rI">
+                                <rect key="frame" x="40" y="125" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiT-HX-9fH">
+                                <rect key="frame" x="147" y="200" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxx-Wg-Okc">
+                                <rect key="frame" x="163" y="236" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htm-n0-qZB">
+                                <rect key="frame" x="172" y="312" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Xjt-Kf-Lu9" eventType="touchUpInside" id="gMY-Qb-bW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Juf-o7-1rI" firstAttribute="leading" secondItem="XUv-X1-oW0" secondAttribute="leading" constant="40" id="7CX-JH-zW7"/>
+                            <constraint firstItem="Juf-o7-1rI" firstAttribute="top" secondItem="XdI-TD-efR" secondAttribute="bottom" constant="20" id="B2C-ES-d1F"/>
+                            <constraint firstItem="Juf-o7-1rI" firstAttribute="centerX" secondItem="clY-4I-Alv" secondAttribute="centerX" id="UHu-zW-R3N"/>
+                            <constraint firstItem="lxx-Wg-Okc" firstAttribute="top" secondItem="LiT-HX-9fH" secondAttribute="bottom" constant="15" id="VW0-W8-ult"/>
+                            <constraint firstItem="XUv-X1-oW0" firstAttribute="trailing" secondItem="Juf-o7-1rI" secondAttribute="trailing" constant="40" id="WTx-tF-KTX"/>
+                            <constraint firstItem="lxx-Wg-Okc" firstAttribute="centerX" secondItem="clY-4I-Alv" secondAttribute="centerX" id="Xgc-du-Dyk"/>
+                            <constraint firstItem="XdI-TD-efR" firstAttribute="centerX" secondItem="clY-4I-Alv" secondAttribute="centerX" id="ZmY-si-Zif"/>
+                            <constraint firstItem="XdI-TD-efR" firstAttribute="top" secondItem="XUv-X1-oW0" secondAttribute="top" constant="20" id="hdX-zr-Rhj"/>
+                            <constraint firstItem="htm-n0-qZB" firstAttribute="top" secondItem="lxx-Wg-Okc" secondAttribute="bottom" constant="45" id="hhi-8n-Hvv"/>
+                            <constraint firstItem="LiT-HX-9fH" firstAttribute="centerX" secondItem="clY-4I-Alv" secondAttribute="centerX" id="p8U-Dl-cbc"/>
+                            <constraint firstItem="LiT-HX-9fH" firstAttribute="top" secondItem="Juf-o7-1rI" secondAttribute="bottom" constant="45" id="wTQ-II-ADC"/>
+                            <constraint firstItem="htm-n0-qZB" firstAttribute="centerX" secondItem="clY-4I-Alv" secondAttribute="centerX" id="z5p-Ct-lYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XUv-X1-oW0"/>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="lxx-Wg-Okc" id="gX9-Wg-zRO"/>
+                        <outlet property="taskNameTextField" destination="Juf-o7-1rI" id="cPK-bq-ayU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqV-En-Iqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
